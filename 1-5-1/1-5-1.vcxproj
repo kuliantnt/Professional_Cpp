@@ -111,6 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="Description.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Employee.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Employee.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
