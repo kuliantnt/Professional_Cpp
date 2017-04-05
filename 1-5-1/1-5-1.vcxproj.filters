@@ -40,5 +40,8 @@
     <ClCompile Include="DatabaseTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Userinterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
