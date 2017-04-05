@@ -1,3 +1,15 @@
+//===============================================================
+//Summary:
+//          Employee ¿‡£¨ 
+//FileName:
+//          Employee.h
+//Remarks:
+//          ...
+//Date:
+//          2017/4/5
+//Author:
+//          ¡≥¡≥(luoweifu@126.com)
+//===============================================================
 #pragma once
 #include <string>
 #include <iostream>
