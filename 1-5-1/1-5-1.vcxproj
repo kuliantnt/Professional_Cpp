@@ -114,10 +114,13 @@
     <Text Include="Description.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Datebase.h" />
     <ClInclude Include="Employee.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Datebase.cpp" />
     <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="EmployeeTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

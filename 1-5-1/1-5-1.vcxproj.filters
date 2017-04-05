@@ -23,9 +23,18 @@
     <ClInclude Include="Employee.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Datebase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Employee.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Datebase.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

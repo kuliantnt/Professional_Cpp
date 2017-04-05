@@ -39,7 +39,7 @@ namespace Records {
         std::cout << "Employee: " << mfirstname << "," << mlastname << std::endl;
         std::cout << "---------------------------------------" << std::endl;
         std::cout << (mHired ? "Current Employee" : "Former Employee") << std::endl;
-        std::cout << "Employee Number: " << mEmployeeNumber << endl;
+        std::cout << "Employee Number: " << mEmployeeNumber << std::endl;
         std::cout << "Salaty: $ " << mSalary << std::endl;
         std::cout << std::endl;
     }
