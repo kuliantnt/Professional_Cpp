@@ -10,7 +10,7 @@ namespace Records {
     Employee & Datebase::addEmployee(const std::string first, const std::string second)
     {
         Employee theEmployee(first, second, mNextEmployeeNumber++);
-        theEmployee.hire;
+        theEmployee.hire();
         employees.push_back(theEmployee);
         return employees[employees.size() - 1];
     }
@@ -23,6 +23,41 @@ namespace Records {
                 return iter;
         }
         throw std::runtime_error("No employee found.");
+    }
+
+    Employee & Datebase::getEmployee(const std::string first, const std::string second)
+    {
+        for (auto &iter : employees)
+        {
+            if (iter.getName() == (first + ' ' + second))
+                return iter;
+        }
+        throw std::runtime_error("No employee found");
+    }
+
+    void Datebase::displayAll() const
+    {
+        for (auto& iter : employees) {
+            iter.display();
+        }
+    }
+
+    void Datebase::displayCurrent() const
+    {
+        for (auto& iter : employees) {
+            if (iter.getHired()) {
+                iter.display();
+            }
+        }
+    }
+
+    void Datebase::displayFormer() const
+    {
+        for (auto& iter : employees) {
+            if (!iter.getHired()) {
+                iter.display();
+            }
+        }
     }
 
 
