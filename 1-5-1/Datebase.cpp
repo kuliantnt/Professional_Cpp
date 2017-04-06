@@ -14,7 +14,7 @@ namespace Records {
     Datebase::Datebase(): mNextEmployeeNumber(kFirstEmployeeNumber)
     {
     }
-
+    
     Employee & Datebase::addEmployee(const std::string first, const std::string second)
     {
         Employee theEmployee(first, second, mNextEmployeeNumber++);
