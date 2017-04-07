@@ -23,7 +23,7 @@
     <ClCompile Include="SpreadshellCell.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="7-2-1.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
