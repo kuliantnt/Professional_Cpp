@@ -7,9 +7,9 @@ EvenSequence::EvenSequence()
 {
 }
 
-inline EvenSequence::EvenSequence(std::initializer_list<double> args)
+EvenSequence::EvenSequence(std::initializer_list<double> args)
 {
-    if (sizeof(args) % 2 != 0) {
+    if (args.size() % 2 != 0) {
         throw std::invalid_argument("initializer_list should contain even number of elements.");
     }
     mSequence.reserve(sizeof(args));
@@ -19,10 +19,9 @@ inline EvenSequence::EvenSequence(std::initializer_list<double> args)
 void EvenSequence::dump() const
 {
     for (auto value : mSequence) {
-        std::cout << value << ",\t";
-        std::cout << std::endl;
+        std::cout << value << ",";
     }
-
+    std::cout << std::endl;
 }
 
 EvenSequence::~EvenSequence()
