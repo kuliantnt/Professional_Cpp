@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpreadshellCell", "7-2-1\7-
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EvenSequence", "EvenSequence\EvenSequence.vcxproj", "{CEE5CC3D-D2AE-408E-BC3D-00DE190C65B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shell", "Shell", "{9C59DFAF-D9DA-4EA1-BADE-DD042EFA8151}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -64,5 +66,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DB052C2C-EB89-4477-B2FF-E84BC10209C4} = {9C59DFAF-D9DA-4EA1-BADE-DD042EFA8151}
 	EndGlobalSection
 EndGlobal

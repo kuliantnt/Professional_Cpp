@@ -18,12 +18,18 @@
     <ClInclude Include="SpreadshellCell.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Spreadshell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SpreadshellCell.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Spreadshell.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -10,6 +10,12 @@ public:
     ~SpreadshellCell();
     SpreadshellCell(double initialValie);
     SpreadshellCell(std::string initialValie);
+    
+    /************************************************************************/
+    /* copy construct openator                                              */
+    /************************************************************************/
+    SpreadshellCell& operator= (const SpreadshellCell& rhs);
+
     /************************************************************************/
     /* Get and Set                                                          */
     /************************************************************************/

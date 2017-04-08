@@ -7,6 +7,16 @@ SpreadshellCell::SpreadshellCell()
 {
 }
 
+SpreadshellCell & SpreadshellCell::operator=(const SpreadshellCell & rhs)
+{
+    if (this == &rhs) {
+        return *this;
+    }
+    mValue = rhs.mValue;
+    mString = rhs.mString;
+    return *this;
+}
+
 void SpreadshellCell::setValue(double inValue)
 {
     mValue = inValue;
