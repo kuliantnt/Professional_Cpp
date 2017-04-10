@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Spreadshell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SpreadshellCell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Spreadshell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SpreadshellCell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{4730ab3e-a348-4e48-b73a-de486b00de8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{15d44a68-0107-4b33-b7f6-3552b975b95b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
