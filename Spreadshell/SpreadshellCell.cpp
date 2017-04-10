@@ -2,10 +2,10 @@
 #include <iostream>
 #include <sstream>
 
+/************************************************************************/
+/* ¹¹Ôìº¯Êý                                                              */
+/************************************************************************/
 
-SpreadshellCell::SpreadshellCell()
-{
-}
 
 SpreadshellCell & SpreadshellCell::operator=(const SpreadshellCell & rhs)
 {
@@ -17,12 +17,29 @@ SpreadshellCell & SpreadshellCell::operator=(const SpreadshellCell & rhs)
     return *this;
 }
 
+SpreadshellCell::SpreadshellCell(double initialValie)
+{
+    setValue(initialValie);
+}
+
+SpreadshellCell::SpreadshellCell(std::string initialValie)
+{
+    setString(initialValie);
+}
+
+SpreadshellCell::~SpreadshellCell()
+{
+    mString.~basic_string();
+}
+
+/************************************************************************/
+/* get & set                                                            */
+/************************************************************************/
 void SpreadshellCell::setValue(double inValue)
 {
     mValue = inValue;
     mString = doubleToString(inValue);
 }
-
 
 double SpreadshellCell::getValue() const
 {
@@ -35,13 +52,10 @@ void SpreadshellCell::setString(const std::string & inString)
     mValue = stringToDouble(inString);
 }
 
-
 std::string SpreadshellCell::getString() const
 {
     return mString;
 }
-
-
 
 std::string SpreadshellCell::doubleToString(double inValue) const
 {
@@ -49,8 +63,6 @@ std::string SpreadshellCell::doubleToString(double inValue) const
     ostr << inValue;
     return ostr.str();
 }
-
-
 
 double SpreadshellCell::stringToDouble(const std::string & inString) const
 {
@@ -61,19 +73,4 @@ double SpreadshellCell::stringToDouble(const std::string & inString) const
         return 0;
     }
     return temp;
-}
-
-
-SpreadshellCell::~SpreadshellCell()
-{
-}
-
-SpreadshellCell::SpreadshellCell(double initialValie)
-{
-    setValue(initialValie);
-}
-
-SpreadshellCell::SpreadshellCell(std::string initialValie)
-{
-    setString(initialValie);
 }

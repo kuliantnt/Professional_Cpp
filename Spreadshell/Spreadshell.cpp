@@ -1,6 +1,5 @@
 #include "Spreadshell.h"
 
-
 Spreadshell::Spreadshell(int inWidth, int inHeight) :
     mWidth(inWidth), mHeight(inHeight)
 {
@@ -19,37 +18,17 @@ void Spreadshell::setCellAt(int x, int y, const SpreadshellCell & cell)
 
 Spreadshell::Spreadshell(const Spreadshell & src)
 {
-    mWidth = src.mWidth;
-    mHeight = src.mHeight;
-    mCells = new SpreadshellCell*[mWidth];
-    for (int i = 0; i != mWidth; ++i) {
-        mCells[i] = new SpreadshellCell[mHeight];
-    }
-    for (int i = 0; i != mWidth; ++i) {
-        for (int j = 0; j != mHeight; ++j) {
-            mCells[i][j] = src.mCells[i][j];
-        }
-    }
+    mID = src.sCounter++;
+    copyForm(src);
 }
 
-Spreadshell & Spreadshell::operator=(const Spreadshell & src)
+Spreadshell & Spreadshell::operator=(const Spreadshell & rhs)
 {
-    if (&src == this) {
+    if (&rhs == this) {
         return *this;
     }
     this -> ~Spreadshell();
-    mHeight = src.mHeight;
-    mWidth = src.mWidth;
-
-    mCells = new SpreadshellCell*[mWidth];
-    for (int i = 0; i != mWidth; ++i) {
-        mCells[i] = new SpreadshellCell[mHeight];
-    }
-    for (int i = 0; i != mWidth; ++i) {
-        for (int j = 0; j != mHeight; ++j) {
-            mCells[i][j] = src.mCells[i][j];
-        }
-    }
+    copyForm(rhs);
     return *this;
 }
 
@@ -70,6 +49,12 @@ int Spreadshell::getHeight()
     return mHeight;
 }
 
+int Spreadshell::getID()
+{
+    return mID;
+    return 0;
+}
+
 Spreadshell::~Spreadshell()
 {
     for (int i = 0; i != mWidth; i++) {
@@ -77,6 +62,22 @@ Spreadshell::~Spreadshell()
     }
     delete[] mCells;
     mCells = nullptr;
+}
+
+void Spreadshell::copyForm(const Spreadshell & src)
+{
+    mHeight = src.mHeight;
+    mWidth = src.mWidth;
+
+    mCells = new SpreadshellCell*[mWidth];
+    for (int i = 0; i != mWidth; ++i) {
+        mCells[i] = new SpreadshellCell[mHeight];
+    }
+    for (int i = 0; i != mWidth; ++i) {
+        for (int j = 0; j != mHeight; ++j) {
+            mCells[i][j] = src.mCells[i][j];
+        }
+    }
 }
 
 bool Spreadshell::inRange(int val, int upper)
