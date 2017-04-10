@@ -5,6 +5,9 @@
 class EvenSequence
 {
 public:
+    /************************************************************************/
+    /* 构造以及拷贝构造函数                                                    */
+    /************************************************************************/
     EvenSequence();
     ~EvenSequence();
     EvenSequence(std::initializer_list < double> args);

@@ -1,9 +1,27 @@
-#include "SpreadshellCell.h"
+#include "Spreadshell.h"
 #include <iostream>
 #include <memory>
 
-int main(int argc, char ** argv)
+void printSpreadshell(Spreadshell s)
 {
+    for (int i = 0; i != s.getWidth(); i++)
+    {
+        for (int j = 0; j != s.getHeight(); j++)
+        {
+            std::cout << s.getCellAt(i, j).getString() << "\t";
+        }
+        std::cout << std::endl;
+    }
+}
+int main(int argc, char ** argv)
+{ 
+  /************************************************************************/
+  /*  创建表格                                                             */
+  /************************************************************************/
+    Spreadshell s1(4, 3);
+    printSpreadshell(s1);
+    system("pause");
+    return 0;
     /************************************************************************/
     /* 7.2.3_1                                                              */
     /************************************************************************/
@@ -43,6 +61,7 @@ int main(int argc, char ** argv)
     /************************************************************************/
     /*using construct function                                              */
     /************************************************************************/
+    /*
     SpreadshellCell aThirdCell("Test");
     SpreadshellCell aFourthCell(4.4);
     auto aThirdCellp = std::make_unique<SpreadshellCell>("4.4");
@@ -51,4 +70,6 @@ int main(int argc, char ** argv)
     std::cout << "aThiredCellp: " << aThirdCellp->getValue() << std::endl;
     aThirdCellp = nullptr;
     system("pause");
+    */
+   
 }
