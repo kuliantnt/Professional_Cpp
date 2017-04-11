@@ -32,6 +32,12 @@ SpreadshellCell::~SpreadshellCell()
     mString.~basic_string();
 }
 
+SpreadshellCell::SpreadshellCell(SpreadshellCell & src)
+{
+    mString = src.mString;
+    mValue = src.mValue;
+}
+
 /************************************************************************/
 /* get & set                                                            */
 /************************************************************************/

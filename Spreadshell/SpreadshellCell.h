@@ -6,8 +6,9 @@ public:
     /************************************************************************/
     /* 构造和释放函数~                                                        */
     /************************************************************************/
-    SpreadshellCell();
+    SpreadshellCell() = default;
     ~SpreadshellCell();
+    SpreadshellCell(SpreadshellCell& src);
     SpreadshellCell(double initialValie);
     SpreadshellCell(std::string initialValie);
     
@@ -29,7 +30,7 @@ private:
     /************************************************************************/
     std::string doubleToString(double inValue) const;
     double stringToDouble(const std::string& inString) const;
-    double mValue;
+    double mValue = 0.0;
     std::string mString;
 };
 

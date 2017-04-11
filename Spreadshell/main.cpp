@@ -8,7 +8,7 @@ void printSpreadshell(Spreadshell s)
     {
         for (int j = 0; j != s.getHeight(); j++)
         {
-            std::cout << s.getCellAt(i, j).getString() << "\t";
+            std::cout << s.getCellAt(i, j).getValue() << "\t";
         }
         std::cout << std::endl;
     }
@@ -20,6 +20,7 @@ int main(int argc, char ** argv)
     /************************************************************************/
     Spreadshell s1(4, 3);
     printSpreadshell(s1);
+    std::cout << "Maximum height is: " << Spreadshell::kmaxHeight << std::endl;
     system("pause");
     return 0;
     /************************************************************************/

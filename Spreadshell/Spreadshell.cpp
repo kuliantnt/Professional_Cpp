@@ -1,7 +1,9 @@
 #include "Spreadshell.h"
 
+int Spreadshell::sCounter;
 Spreadshell::Spreadshell(int inWidth, int inHeight) :
-    mWidth(inWidth), mHeight(inHeight)
+    mWidth(inWidth <= kmaxWidth ? inWidth : kmaxWidth), 
+    mHeight(inHeight <= kmaxHeight ? inHeight : kmaxHeight)
 {
     mCells = new SpreadshellCell*[mWidth];
     for (int i = 0; i != mWidth; ++i) {
