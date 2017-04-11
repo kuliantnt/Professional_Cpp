@@ -4,6 +4,13 @@ class SpreadshellCell
 {
 public:
     /************************************************************************/
+    /* friend                                                               */
+    /************************************************************************/
+    friend SpreadshellCell operator+(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend SpreadshellCell operator-(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend SpreadshellCell operator*(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend SpreadshellCell operator/(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    /************************************************************************/
     /* 构造和释放函数~                                                        */
     /************************************************************************/
     SpreadshellCell() = default;
@@ -14,8 +21,11 @@ public:
     /************************************************************************/
     /* override operation                                                   */
     /************************************************************************/
-    SpreadshellCell operator+(const SpreadshellCell& cell) const;
-    SpreadshellCell operator+(double rhs) const;
+    SpreadshellCell& operator+= (const SpreadshellCell& rhs);
+    SpreadshellCell& operator-= (const SpreadshellCell& rhs);
+    SpreadshellCell& operator*= (const SpreadshellCell& rhs);
+    SpreadshellCell& operator/= (const SpreadshellCell& rhs);
+
     /************************************************************************/
     /* set color                                                            */
     /************************************************************************/

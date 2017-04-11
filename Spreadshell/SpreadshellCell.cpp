@@ -27,13 +27,6 @@ SpreadshellCell::SpreadshellCell(const std::string& initialValie)
     set(initialValie);
 }
 
-SpreadshellCell SpreadshellCell::operator+(const SpreadshellCell & cell) const
-{
-    SpreadshellCell newCell;
-    newCell.set(mValue + cell.mValue);
-    return newCell;
-}
-
 SpreadshellCell::~SpreadshellCell()
 {
     mString.~basic_string();
@@ -93,6 +86,61 @@ double SpreadshellCell::stringToDouble(const std::string & inString)
     }
     return temp;
 }
-SpreadshellCell SpreadshellCell::operator+(double rhs) const {
-    return SpreadshellCell(mValue + rhs);
+
+
+SpreadshellCell & SpreadshellCell::operator+=(const SpreadshellCell & rhs)
+{
+    this->set(mValue + rhs.mValue);
+    return *this;
+}
+
+SpreadshellCell & SpreadshellCell::operator-=(const SpreadshellCell & rhs)
+{
+    this->set(mValue - rhs.mValue);
+    return *this;
+}
+
+SpreadshellCell & SpreadshellCell::operator*=(const SpreadshellCell & rhs)
+{
+    this->set(mValue * rhs.mValue);
+    return *this;
+}
+
+SpreadshellCell & SpreadshellCell::operator/=(const SpreadshellCell & rhs)
+{
+    if (rhs.mValue == 0) {
+        throw std::invalid_argument("不能除以0");
+    }
+    this->set(mValue / rhs.mValue);
+    return *this;
+}
+
+SpreadshellCell operator+(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    SpreadshellCell newCell;
+    newCell.set(lhs.mValue + rhs.mValue);
+    return newCell;
+}
+
+SpreadshellCell operator-(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    SpreadshellCell newCell;
+    newCell.set(lhs.mValue - rhs.mValue);
+    return newCell;
+}
+
+SpreadshellCell operator*(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    SpreadshellCell newCell;
+    newCell.set(lhs.mValue * rhs.mValue);
+    return newCell;
+}
+SpreadshellCell operator/(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    if (rhs.mValue == 0) {
+        throw std::invalid_argument("不能除以0");
+    }
+    SpreadshellCell newCell;
+    newCell.set(lhs.mValue / rhs.mValue);
+    return newCell;
 }
