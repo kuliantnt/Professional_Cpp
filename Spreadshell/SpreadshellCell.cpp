@@ -19,12 +19,19 @@ SpreadshellCell & SpreadshellCell::operator=(const SpreadshellCell & rhs)
 
 SpreadshellCell::SpreadshellCell(double initialValie)
 {
-    setValue(initialValie);
+    set(initialValie);
 }
 
-SpreadshellCell::SpreadshellCell(std::string initialValie)
+SpreadshellCell::SpreadshellCell(const std::string& initialValie)
 {
-    setString(initialValie);
+    set(initialValie);
+}
+
+SpreadshellCell SpreadshellCell::operator+(const SpreadshellCell & cell) const
+{
+    SpreadshellCell newCell;
+    newCell.set(mValue + cell.mValue);
+    return newCell;
 }
 
 SpreadshellCell::~SpreadshellCell()
@@ -41,7 +48,7 @@ SpreadshellCell::SpreadshellCell(SpreadshellCell & src)
 /************************************************************************/
 /* get & set                                                            */
 /************************************************************************/
-void SpreadshellCell::setValue(double inValue)
+void SpreadshellCell::set(double inValue)
 {
     mValue = inValue;
     mString = doubleToString(inValue);
@@ -52,7 +59,7 @@ double SpreadshellCell::getValue() const
     return mValue;
 }
 
-void SpreadshellCell::setString(const std::string & inString)
+void SpreadshellCell::set(const std::string & inString)
 {
     mString = inString;
     mValue = stringToDouble(inString);
@@ -60,17 +67,23 @@ void SpreadshellCell::setString(const std::string & inString)
 
 std::string SpreadshellCell::getString() const
 {
+    mNumberAccesses++;
     return mString;
 }
 
-std::string SpreadshellCell::doubleToString(double inValue) const
+void SpreadshellCell::setColor(Color color)
+{
+    mColor = color;
+}
+
+std::string SpreadshellCell::doubleToString(double inValue) 
 {
     std::ostringstream ostr;
     ostr << inValue;
     return ostr.str();
 }
 
-double SpreadshellCell::stringToDouble(const std::string & inString) const
+double SpreadshellCell::stringToDouble(const std::string & inString) 
 {
     double temp = 0;
     std::istringstream istr(inString);
@@ -79,4 +92,7 @@ double SpreadshellCell::stringToDouble(const std::string & inString) const
         return 0;
     }
     return temp;
+}
+SpreadshellCell SpreadshellCell::operator+(double rhs) const {
+    return SpreadshellCell(mValue + rhs);
 }

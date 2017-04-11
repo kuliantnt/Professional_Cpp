@@ -10,8 +10,21 @@ public:
     ~SpreadshellCell();
     SpreadshellCell(SpreadshellCell& src);
     SpreadshellCell(double initialValie);
-    SpreadshellCell(std::string initialValie);
-    
+    explicit SpreadshellCell(const std::string& initialValie);
+    /************************************************************************/
+    /* override operation                                                   */
+    /************************************************************************/
+    SpreadshellCell operator+(const SpreadshellCell& cell) const;
+    SpreadshellCell operator+(double rhs) const;
+    /************************************************************************/
+    /* set color                                                            */
+    /************************************************************************/
+    enum class Color {
+        Red = 1,
+        Green,
+        Blue,
+        Yello
+    };
     /************************************************************************/
     /* copy construct openator                                              */
     /************************************************************************/
@@ -20,17 +33,21 @@ public:
     /************************************************************************/
     /* Get and Set                                                          */
     /************************************************************************/
-    void setValue(double inValue);
+    void set(double inValue);
     double getValue() const;
-    void setString(const std::string& inString);
+    void set(const std::string& inString);
     std::string getString() const;
+    void setColor(Color color);
+    
 private:
     /************************************************************************/
     /* 两个私有方法 (用于转换)                                                 */
     /************************************************************************/
-    std::string doubleToString(double inValue) const;
-    double stringToDouble(const std::string& inString) const;
-    double mValue = 0.0;
+    static std::string doubleToString(double inValue);
+    static double stringToDouble(const std::string& inString);
+    double mValue = 0.0; 
     std::string mString;
+    mutable size_t mNumberAccesses = 0;
+    Color mColor = Color::Red;
 };
 

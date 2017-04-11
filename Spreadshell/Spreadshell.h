@@ -16,9 +16,9 @@ public:
     /* get? set?                                                            */
     /************************************************************************/
     SpreadshellCell& getCellAt(int x, int y);
-    int getWidth();
-    int getHeight();
-    int getID();
+    int getWidth() const;
+    int getHeight()const;
+    int getID()const;
     /************************************************************************/
     /* destruct funcion                                                     */
     /************************************************************************/

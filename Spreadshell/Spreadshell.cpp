@@ -34,24 +34,24 @@ Spreadshell & Spreadshell::operator=(const Spreadshell & rhs)
     return *this;
 }
 
-SpreadshellCell & Spreadshell::getCellAt(int x, int y)
+SpreadshellCell & Spreadshell::getCellAt(int x, int y) 
 {
     if(!inRange(x,mWidth) || !inRange(y,mHeight))
         throw std::out_of_range("");
     return mCells[x][y];
 }
 
-int Spreadshell::getWidth()
+int Spreadshell::getWidth() const
 {
     return mWidth;
 }
 
-int Spreadshell::getHeight()
+int Spreadshell::getHeight()const
 {
     return mHeight;
 }
 
-int Spreadshell::getID()
+int Spreadshell::getID()const
 {
     return mID;
     return 0;
