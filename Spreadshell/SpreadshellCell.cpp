@@ -144,3 +144,34 @@ SpreadshellCell operator/(const SpreadshellCell & lhs, const SpreadshellCell & r
     newCell.set(lhs.mValue / rhs.mValue);
     return newCell;
 }
+
+bool operator==(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    return (lhs.mValue == rhs.mValue);
+}
+
+bool operator!=(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    return (lhs.mValue != rhs.mValue);
+}
+
+bool operator<(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    return (lhs.mValue < rhs.mValue);
+}
+
+
+bool operator<=(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    return (lhs.mValue <= rhs.mValue);
+}
+
+bool operator>(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    return (lhs.mValue > rhs.mValue);
+}
+
+bool operator>=(const SpreadshellCell & lhs, const SpreadshellCell & rhs)
+{
+    return (lhs.mValue >= rhs.mValue);
+}

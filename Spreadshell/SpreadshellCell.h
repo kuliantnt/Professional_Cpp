@@ -1,7 +1,7 @@
 #pragma once
-#include <string>
-class SpreadshellCell
-{
+#include <iostream>
+#include <sstream>
+class SpreadshellCell{
 public:
     /************************************************************************/
     /* friend                                                               */
@@ -10,6 +10,12 @@ public:
     friend SpreadshellCell operator-(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
     friend SpreadshellCell operator*(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
     friend SpreadshellCell operator/(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend bool operator==(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend bool operator<(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend bool operator>(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend bool operator!=(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend bool operator>=(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
+    friend bool operator<=(const SpreadshellCell&lhs, const SpreadshellCell&rhs);
     /************************************************************************/
     /* 构造和释放函数~                                                        */
     /************************************************************************/
