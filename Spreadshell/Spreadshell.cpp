@@ -18,6 +18,7 @@ Spreadshell::Spreadshell()
     mImpl = nullptr;
 }
 
+
 Spreadshell::Spreadshell(const SpreadshellApplication & theApp, int inWidth, int inHeight)
 {
     mImpl = std::make_unique<SpreadshellImpl>(theApp, inWidth, inHeight);

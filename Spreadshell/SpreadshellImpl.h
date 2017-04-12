@@ -13,6 +13,8 @@ class SpreadshellApplication;
 //Author:
 //          脸脸(kuliantnt@gmail.com)
 //===============================================================
+
+
 class SpreadshellImpl
 {
 public:
@@ -20,6 +22,7 @@ public:
     /* 构造以及拷贝构造函数                                                    */
     /************************************************************************/
     SpreadshellImpl() = delete;
+
     SpreadshellImpl(const SpreadshellApplication& app,int inWidth = kmaxWidth, int inHeight = kmaxHeight);
     SpreadshellImpl(const SpreadshellImpl&src);
     //Spreadshell(Spreadshell&&src);// TODO 2017年4月10日14:54:33
@@ -61,6 +64,7 @@ private:
 class SpreadshellApplication
 {
 public:
+
     SpreadshellApplication& operator=(const SpreadshellApplication& app)  {
         if (this == &app) {
             return *this;
