@@ -1,8 +1,8 @@
-#include "Spreadshell.h"
+#include "SpreadshellImpl.h"
 #include <iostream>
 #include <memory>
 
-void printSpreadshell(Spreadshell s)
+void printSpreadshell(SpreadshellImpl s)
 {
     for (int i = 0; i != s.getWidth(); i++)
     {
@@ -18,9 +18,10 @@ int main(int argc, char ** argv)
     /************************************************************************/
     /*  创建表格                                                             */
     /************************************************************************/
-    Spreadshell s1(4, 3);
+    SpreadshellApplication sApp;
+    SpreadshellImpl s1(sApp,4, 3);
     printSpreadshell(s1);
-    std::cout << "Maximum height is: " << Spreadshell::kmaxHeight << std::endl;
+    std::cout << "Maximum height is: " << SpreadshellImpl::kmaxHeight << std::endl;
     system("pause");
     return 0;
     /************************************************************************/
