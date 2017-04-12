@@ -1,5 +1,16 @@
 #include "Spreadshell.h"
-
+//===============================================================
+//Summary:
+//          Spreadshell ¿‡£¨ 
+//FileName:
+//          Spreadshell.cpp
+//Remarks:
+//          ...
+//Date:
+//          2017/4/12
+//Author:
+//          ¡≥¡≥(kuliantnt@gmail.com)
+//===============================================================
 
 
 Spreadshell::Spreadshell()

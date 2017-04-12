@@ -1,3 +1,15 @@
+//===============================================================
+//Summary:
+//          main ¿‡£¨ 
+//FileName:
+//          main.cpp
+//Remarks:
+//          ...
+//Date:
+//          2017/4/12
+//Author:
+//          ¡≥¡≥(kuliantnt@gmail.com)
+//===============================================================
 #include "SpreadshellImpl.h"
 #include <iostream>
 #include <memory>

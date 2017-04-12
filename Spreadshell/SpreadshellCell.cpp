@@ -1,3 +1,15 @@
+//===============================================================
+//Summary:
+//          SpreadshellCell ¿‡£¨ 
+//FileName:
+//          SpreadshellCell.cpp
+//Remarks:
+//          ...
+//Date:
+//          2017/4/12
+//Author:
+//          ¡≥¡≥(kuliantnt@gmail.com)
+//===============================================================
 #include "SpreadshellCell.h"
 #include <iostream>
 #include <sstream>

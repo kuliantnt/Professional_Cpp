@@ -1,3 +1,15 @@
+//===============================================================
+//Summary:
+//          SpreadshellImpl ¿‡£¨ 
+//FileName:
+//          SpreadshellImpl.cpp
+//Remarks:
+//          ...
+//Date:
+//          2017/4/12
+//Author:
+//          ¡≥¡≥(kuliantnt@gmail.com)
+//===============================================================
 #include "SpreadshellImpl.h"
 
 int SpreadshellImpl::sCounter;

@@ -1,6 +1,18 @@
 #pragma once
 #include "SpreadshellCell.h"
 class SpreadshellApplication;
+//===============================================================
+//Summary:
+//          SpreadshellImpl 类， 
+//FileName:
+//          SpreadshellImpl.h
+//Remarks:
+//          ...
+//Date:
+//          2017/4/12
+//Author:
+//          脸脸(kuliantnt@gmail.com)
+//===============================================================
 class SpreadshellImpl
 {
 public:
@@ -36,11 +48,16 @@ private:
     bool inRange(int val, int upper);
     int mWidth, mHeight;
     SpreadshellCell** mCells;
-    //静态成员函数
+    /************************************************************************/
+    /* @brief:静态函数成员                                                    */
+    /************************************************************************/
     static int sCounter;
     int mID;
 };
 
+/************************************************************************/
+/* @brief:一个准备实现的类？？？？                                          */
+/************************************************************************/
 class SpreadshellApplication
 {
 public:

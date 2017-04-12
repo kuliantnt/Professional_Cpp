@@ -1,4 +1,16 @@
 #pragma once
+//===============================================================
+//Summary:
+//          SpreadshellCell ¿‡£¨ 
+//FileName:
+//          SpreadshellCell.h
+//Remarks:
+//          ...
+//Date:
+//          2017/4/12
+//Author:
+//          ¡≥¡≥(kuliantnt@gmail.com)
+//===============================================================
 #include <iostream>
 #include <sstream>
 class SpreadshellCell{
