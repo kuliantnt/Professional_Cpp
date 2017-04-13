@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="SpreadshellImpl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -14,6 +11,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="SpreadshellCell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StringSpreadshellCell.cpp">
+      <Filter>Spreadshell</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleSpreadshellCell.cpp">
+      <Filter>Spreadshell</Filter>
+    </ClCompile>
+    <ClCompile Include="main_old.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -30,6 +39,12 @@
     <ClInclude Include="SpreadshellCell.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="StringSpreadshellCell.h">
+      <Filter>Spreadshell</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleSpreadshellCell.h">
+      <Filter>Spreadshell</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="头文件">
@@ -37,6 +52,9 @@
     </Filter>
     <Filter Include="源文件">
       <UniqueIdentifier>{15d44a68-0107-4b33-b7f6-3552b975b95b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Spreadshell">
+      <UniqueIdentifier>{74b1b89f-7b62-4f52-ab22-e306bf7a0a91}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
