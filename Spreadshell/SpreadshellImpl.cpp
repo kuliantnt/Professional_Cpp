@@ -19,13 +19,13 @@ SpreadshellImpl::SpreadshellImpl(const SpreadshellApplication& theApp,
     mWidth(inWidth <= kmaxWidth ? inWidth : kmaxWidth), 
     mHeight(inHeight <= kmaxHeight ? inHeight : kmaxHeight)
 {
-    mCells = new SpreadshellCell*[mWidth];
+    mCells = new SpreadshellCell_old*[mWidth];
     for (int i = 0; i != mWidth; ++i) {
-        mCells[i] = new SpreadshellCell[mHeight];
+        mCells[i] = new SpreadshellCell_old[mHeight];
     }
 }
 
-void SpreadshellImpl::setCellAt(int x, int y, const SpreadshellCell & cell)
+void SpreadshellImpl::setCellAt(int x, int y, const SpreadshellCell_old & cell)
 {
     if (!inRange(x, mWidth) || !inRange(y, mWidth))
         throw std::out_of_range("");
@@ -49,7 +49,7 @@ SpreadshellImpl & SpreadshellImpl::operator=(const SpreadshellImpl & rhs)
     return *this;
 }
 
-SpreadshellCell & SpreadshellImpl::getCellAt(int x, int y) 
+SpreadshellCell_old & SpreadshellImpl::getCellAt(int x, int y) 
 {
     if(!inRange(x,mWidth) || !inRange(y,mHeight))
         throw std::out_of_range("");
@@ -86,9 +86,9 @@ void SpreadshellImpl::copyForm(const SpreadshellImpl & src)
     mHeight = src.mHeight;
     mWidth = src.mWidth;
 
-    mCells = new SpreadshellCell*[mWidth];
+    mCells = new SpreadshellCell_old*[mWidth];
     for (int i = 0; i != mWidth; ++i) {
-        mCells[i] = new SpreadshellCell[mHeight];
+        mCells[i] = new SpreadshellCell_old[mHeight];
     }
     for (int i = 0; i != mWidth; ++i) {
         for (int j = 0; j != mHeight; ++j) {

@@ -4,22 +4,32 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="SpreadshellCell.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="SpreadshellImpl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Spreadshell.cpp" />
+    <ClCompile Include="Spreadshell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SpreadshellCell_old.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SpreadshellCell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SpreadshellCell.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="SpreadshellImpl.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Spreadshell.h" />
+    <ClInclude Include="Spreadshell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SpreadshellCell_old.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SpreadshellCell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="头文件">

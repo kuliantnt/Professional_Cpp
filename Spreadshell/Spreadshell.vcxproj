@@ -119,14 +119,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Spreadshell.h" />
-    <ClInclude Include="SpreadshellImpl.h" />
     <ClInclude Include="SpreadshellCell.h" />
+    <ClInclude Include="SpreadshellImpl.h" />
+    <ClInclude Include="SpreadshellCell_old.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Spreadshell.cpp" />
-    <ClCompile Include="SpreadshellImpl.cpp" />
     <ClCompile Include="SpreadshellCell.cpp" />
+    <ClCompile Include="SpreadshellImpl.cpp" />
+    <ClCompile Include="SpreadshellCell_old.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

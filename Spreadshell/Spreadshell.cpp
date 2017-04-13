@@ -45,12 +45,12 @@ Spreadshell & Spreadshell::operator=(const Spreadshell & rhs)
     return *this;
 }
 
-void Spreadshell::setCell(int x, int y, const SpreadshellCell & inCell)
+void Spreadshell::setCell(int x, int y, const SpreadshellCell_old & inCell)
 {
     mImpl->setCellAt(x, y, inCell);
 }
 
-SpreadshellCell & Spreadshell::getCellAt(int x, int y)
+SpreadshellCell_old & Spreadshell::getCellAt(int x, int y)
 {
     return mImpl->getCellAt(x, y);
 }

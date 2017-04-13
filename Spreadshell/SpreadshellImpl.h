@@ -1,5 +1,5 @@
 #pragma once
-#include "SpreadshellCell.h"
+#include "SpreadshellCell_old.h"
 //===============================================================
 //Summary:
 //          SpreadshellImpl 类， 
@@ -29,11 +29,11 @@ public:
     /************************************************************************/
     /* get? set?                                                            */
     /************************************************************************/
-    SpreadshellCell& getCellAt(int x, int y);
+    SpreadshellCell_old& getCellAt(int x, int y);
     int getWidth() const;
     int getHeight()const;
     int getID()const;
-    void setCellAt(int x, int y, const SpreadshellCell& cell);
+    void setCellAt(int x, int y, const SpreadshellCell_old& cell);
     /************************************************************************/
     /* destruct funcion                                                     */
     /************************************************************************/
@@ -48,7 +48,7 @@ private:
     void copyForm(const SpreadshellImpl& src);
     bool inRange(int val, int upper);
     int mWidth, mHeight;
-    SpreadshellCell** mCells;
+    SpreadshellCell_old** mCells;
     /************************************************************************/
     /* @brief:静态函数成员                                                    */
     /************************************************************************/

@@ -11,7 +11,7 @@
 //Author:
 //          Á³Á³(kuliantnt@gmail.com)
 //===============================================================
-#include "SpreadshellCell.h"
+#include "SpreadshellCell_old.h"
 #include "SpreadshellImpl.h"
 #include "memory"
 class SpreadshellApplication;
@@ -38,8 +38,8 @@ public:
     /* @brief:get&set                                                       */
     /************************************************************************/
 
-    void setCell(int x, int y, const SpreadshellCell& inCell);
-    SpreadshellCell& getCellAt(int x, int y);
+    void setCell(int x, int y, const SpreadshellCell_old& inCell);
+    SpreadshellCell_old& getCellAt(int x, int y);
     int getid()const;
 private:
     /************************************************************************/
