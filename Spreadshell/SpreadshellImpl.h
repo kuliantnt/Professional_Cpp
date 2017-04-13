@@ -1,6 +1,5 @@
 #pragma once
 #include "SpreadshellCell.h"
-class SpreadshellApplication;
 //===============================================================
 //Summary:
 //          SpreadshellImpl ¿‡£¨ 
@@ -13,8 +12,7 @@ class SpreadshellApplication;
 //Author:
 //          ¡≥¡≥(kuliantnt@gmail.com)
 //===============================================================
-
-
+class SpreadshellApplication;
 class SpreadshellImpl
 {
 public:

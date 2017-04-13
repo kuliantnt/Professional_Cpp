@@ -14,7 +14,7 @@
 
 int SpreadshellImpl::sCounter;
 SpreadshellImpl::SpreadshellImpl(const SpreadshellApplication& theApp, 
-    int inWidth = kmaxWidth, int inHeight = kmaxHeight) :
+    int inWidth , int inHeight ) :
     mTheApp(theApp),
     mWidth(inWidth <= kmaxWidth ? inWidth : kmaxWidth), 
     mHeight(inHeight <= kmaxHeight ? inHeight : kmaxHeight)
