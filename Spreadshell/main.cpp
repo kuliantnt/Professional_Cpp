@@ -29,6 +29,15 @@ int main(int argc, char * argv[])
     std::cout << "Vector values are [" << cellArray[0]->getString() << "," <<
         cellArray[1]->getString() << "," << cellArray[2]->getString() << "]" <<
         std::endl;
+
+    /************************************************************************/
+    /* @brief:Q2                                                            */
+    /************************************************************************/
+    std::cout << "Q2" << std::endl;
+    DoubleSpreadshellCell myDouble;
+    myDouble.set(8.4);
+    StringSpreadshellCell result = myDouble + myDouble;
+    std::cout << result.getString() << std::endl;
     system("pause");
     return 0;
 }
