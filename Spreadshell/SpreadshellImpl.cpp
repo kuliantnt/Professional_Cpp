@@ -15,7 +15,6 @@
 int SpreadshellImpl::sCounter;
 SpreadshellImpl::SpreadshellImpl(const SpreadshellApplication& theApp, 
     int inWidth , int inHeight ) :
-    mTheApp(theApp),
     mWidth(inWidth <= kmaxWidth ? inWidth : kmaxWidth), 
     mHeight(inHeight <= kmaxHeight ? inHeight : kmaxHeight)
 {
@@ -32,11 +31,20 @@ void SpreadshellImpl::setCellAt(int x, int y, const SpreadshellCell_old & cell)
     mCells[x][y] = cell;
 }
 
-SpreadshellImpl::SpreadshellImpl(const SpreadshellImpl & src):
-    mTheApp(src.mTheApp)
+SpreadshellImpl::SpreadshellImpl(const SpreadshellImpl & src)
 {
     mID = src.sCounter++;
     copyForm(src);
+}
+
+SpreadshellImpl::SpreadshellImpl(SpreadshellImpl && src) noexcept
+{
+    mWidth = src.mWidth;
+    mHeight = src.mHeight;
+    mCells = src.mCells;
+    src.mWidth = 0;
+    src.mHeight = 0;
+    src.mCells = nullptr;
 }
 
 SpreadshellImpl & SpreadshellImpl::operator=(const SpreadshellImpl & rhs)
@@ -44,8 +52,23 @@ SpreadshellImpl & SpreadshellImpl::operator=(const SpreadshellImpl & rhs)
     if (&rhs == this) {
         return *this;
     }
-    this -> ~SpreadshellImpl();
+    freeMemory();
     copyForm(rhs);
+    return *this;
+}
+
+SpreadshellImpl & SpreadshellImpl::operator=(SpreadshellImpl && rhs) noexcept
+{
+    if (this == &rhs)
+        return *this;
+    freeMemory();
+    mWidth = rhs.mWidth;
+    mHeight = rhs.mHeight;
+    mCells = rhs.mCells;
+
+    rhs.mCells = nullptr;
+    rhs.mWidth = 0;
+    rhs.mHeight = 0;
     return *this;
 }
 
@@ -74,11 +97,7 @@ int SpreadshellImpl::getID()const
 
 SpreadshellImpl::~SpreadshellImpl()
 {
-    for (int i = 0; i != mWidth; i++) {
-        delete[] mCells[i];
-    }
-    delete[] mCells;
-    mCells = nullptr;
+    freeMemory();
 }
 
 void SpreadshellImpl::copyForm(const SpreadshellImpl & src)
@@ -103,4 +122,13 @@ bool SpreadshellImpl::inRange(int val, int upper)
         return true;
     else
         return false;
+}
+
+void SpreadshellImpl::freeMemory()
+{
+    for (int i = 0; i != mWidth; i++) {
+        delete[] mCells[i];
+    }
+    delete[] mCells;
+    mCells = nullptr;
 }

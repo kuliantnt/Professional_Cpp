@@ -23,9 +23,9 @@ public:
 
     SpreadshellImpl(const SpreadshellApplication& app,int inWidth = kmaxWidth, int inHeight = kmaxHeight);
     SpreadshellImpl(const SpreadshellImpl&src);
-    //Spreadshell(Spreadshell&&src);// TODO 2017年4月10日14:54:33
-    SpreadshellImpl& operator= (const SpreadshellImpl& src);
-    //Spreadshell& operator= (Spreadshell&& src);// TODO 2017年4月10日14:54:45
+    SpreadshellImpl(SpreadshellImpl&&src) noexcept;// TODO 2017年4月10日14:54:33
+    SpreadshellImpl& operator= (const SpreadshellImpl& rhs);
+    SpreadshellImpl& operator= (SpreadshellImpl&& rhs) noexcept;// TODO 2017年4月10日14:54:45
     /************************************************************************/
     /* get? set?                                                            */
     /************************************************************************/
@@ -44,9 +44,10 @@ public:
     static const int kmaxHeight = 100;
     static const int kmaxWidth = 100;
 private:
-    const SpreadshellApplication& mTheApp;
+    //const SpreadshellApplication& mTheApp;
     void copyForm(const SpreadshellImpl& src);
     bool inRange(int val, int upper);
+    void freeMemory();
     int mWidth, mHeight;
     SpreadshellCell_old** mCells;
     /************************************************************************/
