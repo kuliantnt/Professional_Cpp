@@ -126,6 +126,7 @@
     <ClInclude Include="StringSpreadshellCell.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\GanmeBoard\ChessPiece.cpp" />
     <ClCompile Include="DoubleSpreadshellCell.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="main_old.cpp" />

@@ -25,6 +25,7 @@
     <ClCompile Include="DoubleSpreadshellCell.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\GanmeBoard\ChessPiece.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SpreadshellImpl.h">
