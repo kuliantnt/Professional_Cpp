@@ -2,9 +2,6 @@
 
 
 
-ChessPiece::ChessPiece()
-{
-}
 
 std::unique_ptr<GamePiece> ChessPiece::clone() const
 {
@@ -12,6 +9,3 @@ std::unique_ptr<GamePiece> ChessPiece::clone() const
 }
 
 
-ChessPiece::~ChessPiece()
-{
-}

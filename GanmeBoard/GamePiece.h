@@ -15,8 +15,7 @@
 class GamePiece
 {
 public:
-    GamePiece();
+    GamePiece() = default;
     virtual std::unique_ptr<GamePiece> clone()const = 0;
-    virtual ~GamePiece();
 };
 

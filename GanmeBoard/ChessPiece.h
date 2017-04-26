@@ -16,8 +16,7 @@ class ChessPiece :
     public GamePiece
 {
 public:
-    ChessPiece();
+    ChessPiece() = default;
     virtual std::unique_ptr<GamePiece> clone() const override;
-    virtual ~ChessPiece();
 };
 

@@ -15,8 +15,31 @@ GameBoard::GameBoard(const GameBoard & src)
     copyForm(src);
 }
 
+GameBoard & GameBoard::operator=(const GameBoard & rhs)
+{
+    if (this != &rhs)
+        return *this;
+    copyForm(rhs);
+    return *this;
+}
+
 GameBoard::~GameBoard()
 {
+}
+
+void GameBoard::setPieceAt(size_t x, size_t y, std::unique_ptr<GamePiece> inPiece)
+{
+    mCells[x][y] = move(inPiece);
+}
+
+std::unique_ptr<GamePiece>& GameBoard::getpriceAt(size_t x, size_t y)
+{
+    return mCells[x][y];
+}
+
+const std::unique_ptr<GamePiece>& GameBoard::getpriceAt(size_t x, size_t y) const
+{
+    return mCells[x][y];
 }
 
 void GameBoard::copyForm(const GameBoard & src)

@@ -2,11 +2,5 @@
 
 
 
-GamePiece::GamePiece()
-{
-}
 
 
-GamePiece::~GamePiece()
-{
-}
