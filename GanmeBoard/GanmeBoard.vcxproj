@@ -117,11 +117,13 @@
     <ClInclude Include="ChessPiece.h" />
     <ClInclude Include="GameBoard.h" />
     <ClInclude Include="GamePiece.h" />
+    <ClInclude Include="Grid.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChessPiece.cpp" />
     <ClCompile Include="GameBoard.cpp" />
     <ClCompile Include="GamePiece.cpp" />
+    <ClCompile Include="Grid.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
