@@ -1,21 +1,17 @@
 #include "GameBoard.h"
 
 
-
-
-
-
-GameBoard::GameBoard(size_t inWidth, size_t inHeiget) :mWidth(inWidth), mHeight(inHeiget)
+GameBoard::GameBoard(size_t inWidth, size_t inHeiget) : mWidth(inWidth), mHeight(inHeiget)
 {
     initializedCellContainer();
 }
 
-GameBoard::GameBoard(const GameBoard & src)
+GameBoard::GameBoard(const GameBoard& src)
 {
     copyForm(src);
 }
 
-GameBoard & GameBoard::operator=(const GameBoard & rhs)
+GameBoard& GameBoard::operator=(const GameBoard& rhs)
 {
     if (this != &rhs)
         return *this;
@@ -42,7 +38,12 @@ const std::unique_ptr<GamePiece>& GameBoard::getpriceAt(size_t x, size_t y) cons
     return mCells[x][y];
 }
 
-void GameBoard::copyForm(const GameBoard & src)
+size_t GameBoard::getHeight() const
+{
+    return mHeight;
+}
+
+void GameBoard::copyForm(const GameBoard& src)
 {
     mWidth = src.mWidth;
     mHeight = src.mHeight;
@@ -54,7 +55,7 @@ void GameBoard::copyForm(const GameBoard & src)
             if (src.mCells[i][j])
             {
                 mCells[i][j] = src.mCells[i][j]->clone();
-            } 
+            }
             else
             {
                 mCells[i][j].reset();
