@@ -4,8 +4,8 @@ template <typename T>
 class Grid
 {
 public:
-    explicit Grid(size_t inWidth = kDefualtWidth,
-        size_t inHeight = kDefualtHeight);
+    explicit Grid(size_t inWidth = kDefaultWidth,
+        size_t inHeight = kDefaultHeight);
     virtual ~Grid();
 
     /**
@@ -31,8 +31,8 @@ public:
 
     size_t getHeight() const { return mHeight; }
     size_t getWidth() const { return mWidth; }
-    static const size_t kDefualtWidth = 100;
-    static const size_t kDefualtHeight = 100;
+    static const size_t kDefaultWidth = 100;
+    static const size_t kDefaultHeight = 100;
 
 private:
     /**

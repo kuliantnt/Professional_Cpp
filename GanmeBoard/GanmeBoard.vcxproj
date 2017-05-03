@@ -118,6 +118,7 @@
     <ClInclude Include="GameBoard.h" />
     <ClInclude Include="GamePiece.h" />
     <ClInclude Include="Grid.h" />
+    <ClInclude Include="Grid_const_char.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChessPiece.cpp" />
@@ -125,6 +126,7 @@
     <ClCompile Include="GamePiece.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Grid_const_char.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

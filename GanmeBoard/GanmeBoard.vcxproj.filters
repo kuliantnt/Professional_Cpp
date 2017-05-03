@@ -27,6 +27,9 @@
     <ClInclude Include="Grid.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Grid_const_char.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GamePiece.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Grid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid_const_char.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
