@@ -35,16 +35,10 @@
     <ClCompile Include="GamePiece.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GameBoard.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ChessPiece.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Grid.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Grid_const_char.cpp">

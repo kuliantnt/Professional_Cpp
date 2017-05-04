@@ -1,49 +1,41 @@
-//===============================================================
-//Summary:
-//          GameBoard 类， 
-//FileName:
-//          GameBoard.h
-//Remarks:
-//          ...
-//Date:
-//          2017/4/25
-//Author:
-//          脸脸(kuliantnt@gmail.com)
-//===============================================================
 #pragma once
-#include <vector>
-#include "ChessPiece.h"
-class GameBoard
+
+#include "Grid.h"
+/**
+ * \brief GameBoard类，继承与Grid
+ * \tparam T 类型T
+ */
+template <typename T>
+class GameBoard : public Grid<T>
 {
 public:
     /**
      * \brief 构造函数
-     * \param inWidth 
-     * \param inHeiget 
+     * \param inWidth 宽度
+     * \param inHeight 高度
      */
-    explicit GameBoard(size_t inWidth = kDefaultWidth, size_t inHeiget = kDefaultHeiget);
+    explicit GameBoard(size_t inWidth = Grid<T>::kDefaultWidth, size_t inHeight = Grid<T>::kDefaultHeight);
     /**
-     * \brief 拷贝构造函数
-     * \param src 
+     * \brief 移动函数
+     * \param xSrc 源x
+     * \param ySrc 源y
+     * \param xDest 目标x
+     * \param yDest 目标y
      */
-    GameBoard(const GameBoard& src);
-    GameBoard& operator= (const GameBoard&rhs);
-    virtual ~GameBoard();
-    void setPieceAt(size_t x, size_t y, std::unique_ptr<GamePiece> inPiece);
-    std::unique_ptr<GamePiece>& getpriceAt(size_t x, size_t y) ;
-    const std::unique_ptr<GamePiece>& getpriceAt(size_t x, size_t y) const;
-    size_t getHeight() const;
-    size_t getWidth() const { return mWidth; }
-    static const size_t kDefaultWidth = 10;
-    static const size_t kDefaultHeiget= 10;
-private:
-    /**
-     * \brief 辅助的copy函数
-     * \param src 
-     */
-    void copyForm(const GameBoard& src);
-    void initializedCellContainer();
-    std::vector<std::vector<std::unique_ptr<GamePiece>>> mCells;
-    size_t mWidth, mHeight;
+    void move(size_t xSrc, size_t ySrc, size_t xDest, size_t yDest);
 };
 
+
+
+template <typename T>
+GameBoard<T>::GameBoard(size_t inWidth, size_t inHeight)
+    :Grid<T>(inWidth, inHeight)
+{
+}
+
+template <typename T>
+void GameBoard<T>::move(size_t xSrc, size_t ySrc, size_t xDest, size_t yDest)
+{
+    Grid<T>::setElementAt(xDest, yDest, Grid<T>::getElementAt(xSrc, ySrc));
+    Grid<T>::setElementAt(xSrc, ySrc, T());
+}

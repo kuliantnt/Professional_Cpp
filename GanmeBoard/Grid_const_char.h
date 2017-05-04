@@ -1,5 +1,8 @@
 #pragma once
 #include "Grid.h"
+/**
+ * \brief 用于字符串常量的表格
+ */
 template<>
 class Grid<const char*>
 {
@@ -48,7 +51,15 @@ private:
      * \brief 初始化函数
      */
     void initializeCellsContainer();
+    /**
+     * \brief 元素容器
+     */
     std::vector<std::vector<std::string>> mCells;
-    size_t mWidth, mHeight;
+
+    /**
+     * \brief 位置坐标
+     */
+    size_t mWidth;
+    size_t mHeight;
 };
 
