@@ -1,5 +1,10 @@
 #pragma once
 #include <vector>
+#include <algorithm>
+
+//Forward declare
+template <typename T> class Grid;
+template <typename T> Grid<T> operator+(const Grid<T> &lhs, const Grid<T> &rhs);
 /**
  * \brief 网格模板
  * \tparam T 类型T
@@ -8,6 +13,7 @@ template <typename T>
 class Grid
 {
 public:
+    friend Grid<T> operator+<T>(const Grid<T>& lhs, const Grid<T> & rhs);
     /**
      * \brief 构造函数
      * \param inWidth 输入宽度
@@ -149,3 +155,25 @@ void Grid<T>::initializeCellsContainer()
     }
 }
 
+/**
+ * \brief 两个Grid求和
+ * \tparam T 模板类型
+ * \param lhs 左值
+ * \param rhs 右值
+ * \return 求和
+ */
+template <typename T>
+Grid<T> operator+(const Grid<T>&lhs , const Grid<T>& rhs)
+{
+    size_t minWidth = std::min(lhs.getWidth(), rhs.getWidth());
+    size_t minHeiget = std::min(lhs.getHeight(), rhs.getHeight());
+    Grid<T> result(minHeiget, minWidth);
+    for(size_t y = 0;y < minHeiget; ++y)
+    {
+        for(size_t x = 0; x <minWidth; ++x)
+        {
+            result.setElementAt(x, y, lhs.mCells[x][y] + rhs.mCells[x][y]);
+        }
+    }
+    return result;
+}
