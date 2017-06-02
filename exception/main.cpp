@@ -15,7 +15,7 @@ int main(int argc, char ** argv)
     {
         std::new_handler oldHandler = std::set_new_handler(myNewHandler);
         size_t numInts = std::numeric_limits<int>::max();
-        int*ptr = new int[numInts];
+        int* ptr = new int[numInts];
         std::set_new_handler(oldHandler);
     }
     catch(const PleaseTerminateMe&)
