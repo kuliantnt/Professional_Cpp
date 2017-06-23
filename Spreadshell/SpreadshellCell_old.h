@@ -13,6 +13,9 @@
 //===============================================================
 #include <iostream>
 #include <sstream>
+class SpreadshellCell_old;
+std::ostream& operator<< (std::ostream&os, const SpreadshellCell_old&cell);
+std::istream& operator>> (std::istream&is, SpreadshellCell_old&cell);
 class SpreadshellCell_old{
 public:
     /************************************************************************/
@@ -22,6 +25,8 @@ public:
     friend SpreadshellCell_old operator-(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);
     friend SpreadshellCell_old operator*(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);
     friend SpreadshellCell_old operator/(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);
+	friend std::ostream& operator<< (std::ostream&, const SpreadshellCell_old&);
+	friend std::istream& operator>> (std::istream&,SpreadshellCell_old&);
     friend bool operator==(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);
     friend bool operator<(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);
     friend bool operator>(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);

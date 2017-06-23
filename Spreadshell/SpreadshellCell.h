@@ -12,9 +12,14 @@
 //===============================================================
 #pragma once
 #include <string>
+#include <iostream>
+class SpreadshellCell;
+
+
 class SpreadshellCell
 {
 public:
+
     SpreadshellCell();
     virtual ~SpreadshellCell();
     virtual void set(const std::string&) = 0;

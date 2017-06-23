@@ -14,10 +14,6 @@
 
 
 
-SpreadshellCell::SpreadshellCell()
-{
-}
-
 
 SpreadshellCell::~SpreadshellCell()
 {

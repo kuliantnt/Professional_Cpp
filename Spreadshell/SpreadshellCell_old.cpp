@@ -39,6 +39,20 @@ SpreadshellCell_old::SpreadshellCell_old(const std::string& initialValie)
     set(initialValie);
 }
 
+std::ostream& operator<<(std::ostream& os, const SpreadshellCell_old& cell)
+{
+	os << cell.mString;
+	return os;
+}
+
+std::istream& operator>>(std::istream& is, SpreadshellCell_old& cell)
+{
+	std::string temp;
+	is >> temp;
+	cell.set(temp);
+	return is;
+}
+
 SpreadshellCell_old::~SpreadshellCell_old()
 {
     mString.~basic_string();
