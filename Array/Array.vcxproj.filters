@@ -20,5 +20,11 @@
     <ClInclude Include="Array.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="AssociativeArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EvenSequence", "EvenSequence\EvenSequence.vcxproj", "{CEE5CC3D-D2AE-408E-BC3D-00DE190C65B2}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exception", "exception\exception.vcxproj", "{A835F99C-FDCA-4203-9473-07B9A0B2E4D8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameBoardException", "GameBoardException\GameBoardException.vcxproj", "{10DB19A5-E184-4DFB-9CF0-64A69C09703C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointer", "Pointer\Pointer.vcxproj", "{429D6822-086C-49D3-B0BB-E3A4436D688C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,14 @@ Global
 		{10DB19A5-E184-4DFB-9CF0-64A69C09703C}.Release|x64.Build.0 = Release|x64
 		{10DB19A5-E184-4DFB-9CF0-64A69C09703C}.Release|x86.ActiveCfg = Release|Win32
 		{10DB19A5-E184-4DFB-9CF0-64A69C09703C}.Release|x86.Build.0 = Release|Win32
+		{429D6822-086C-49D3-B0BB-E3A4436D688C}.Debug|x64.ActiveCfg = Debug|x64
+		{429D6822-086C-49D3-B0BB-E3A4436D688C}.Debug|x64.Build.0 = Debug|x64
+		{429D6822-086C-49D3-B0BB-E3A4436D688C}.Debug|x86.ActiveCfg = Debug|Win32
+		{429D6822-086C-49D3-B0BB-E3A4436D688C}.Debug|x86.Build.0 = Debug|Win32
+		{429D6822-086C-49D3-B0BB-E3A4436D688C}.Release|x64.ActiveCfg = Release|x64
+		{429D6822-086C-49D3-B0BB-E3A4436D688C}.Release|x64.Build.0 = Release|x64
+		{429D6822-086C-49D3-B0BB-E3A4436D688C}.Release|x86.ActiveCfg = Release|Win32
+		{429D6822-086C-49D3-B0BB-E3A4436D688C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
