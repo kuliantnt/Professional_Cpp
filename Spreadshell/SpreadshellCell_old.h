@@ -33,6 +33,11 @@ public:
     friend bool operator!=(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);
     friend bool operator>=(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);
     friend bool operator<=(const SpreadshellCell_old&lhs, const SpreadshellCell_old&rhs);
+	/**
+	 * 转换函数
+	 */
+	explicit operator double() const;
+	operator std::string() const;
     /************************************************************************/
     /* 构造和释放函数~                                                        */
     /************************************************************************/

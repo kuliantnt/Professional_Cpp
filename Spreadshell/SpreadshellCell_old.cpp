@@ -53,6 +53,16 @@ std::istream& operator>>(std::istream& is, SpreadshellCell_old& cell)
 	return is;
 }
 
+SpreadshellCell_old::operator double() const
+{
+	return mValue;
+}
+
+SpreadshellCell_old::operator std::string() const
+{
+	return mString;
+}
+
 SpreadshellCell_old::~SpreadshellCell_old()
 {
     mString.~basic_string();
