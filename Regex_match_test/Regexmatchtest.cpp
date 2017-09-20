@@ -29,13 +29,13 @@ int main(int argc, char* argv)
 			catch (const std::invalid_argument& e) {
 				std::cout << e.what() << std::endl;
 			}
-			
+
 		}
 		else
 			std::cout << "Invalid data." << std::endl;
 	}
-    return 0;
-	*/
+	return 0;
+
 	std::regex r("//\\s*(.+)$");
 	while (true)
 	{
@@ -50,4 +50,20 @@ int main(int argc, char* argv)
 			std::cout << " No comment found!" << std::endl;
 	}
 }
+*/
 
+	std::regex reg("[\\w]+");
+	while (true)
+	{
+		std::cout << "Enter a string to split (q=quit): ";
+		std::string str;
+		if (!getline(std::cin, str) || str == "q")
+			break;
+		const std::sregex_iterator end;
+		for (std::sregex_iterator iter(cbegin(str), cend(str), reg); iter != end;
+			++iter)
+		{
+			std::cout << "\"" << (*iter)[0] << "\"" << std::endl;
+		}
+	}
+}
